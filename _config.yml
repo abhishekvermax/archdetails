@@ -1,4 +1,4 @@
-title: ArchDetails
+title: archdetails
 tagline: Architecture Simplified
 author: Abhishek Verma
 role: Data & AI Platform Architect
@@ -27,7 +27,7 @@ timezone: Europe/Berlin
 # ---------------------------------------------------------------
 collections:
   foundations:        { output: true, permalink: /:collection/:path/ }
-  distributed-systems:{ output: true, permalink: /:collection/:path/ }
+  distributed-systems: { output: true, permalink: /:collection/:path/ }
   data-engineering:   { output: true, permalink: /:collection/:path/ }
   data-platform:      { output: true, permalink: /:collection/:path/ }
   platform:           { output: true, permalink: /:collection/:path/ }
