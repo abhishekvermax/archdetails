@@ -1,0 +1,2 @@
+# archdetails
+Architecture Simplified
