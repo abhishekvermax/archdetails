@@ -1,4 +1,4 @@
-title: architect
+title: ArchDetails
 tagline: Architecture Simplified
 author: Abhishek Verma
 role: Data & AI Platform Architect
@@ -8,7 +8,7 @@ github: abhishekvermax
 linkedin: abhishekvermaengineer
 
 url: "https://abhishekvermax.github.io"
-baseurl: "/architect"
+baseurl: "/archdetails"
 
 markdown: kramdown
 kramdown:
