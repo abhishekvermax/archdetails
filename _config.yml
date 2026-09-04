@@ -1,4 +1,4 @@
-title: archdetails
+title: ARCHDETAILS
 tagline: Architecture Simplified
 author: Abhishek Verma
 role: Data & AI Platform Architect
@@ -20,11 +20,7 @@ kramdown:
 
 timezone: Europe/Berlin
 
-# ---------------------------------------------------------------
-# Sections. Each one is a folder: _foundations, _data-engineering …
-# Drop a .md file in and it appears on the site. No date in the
-# filename, no registration step, nothing else to edit.
-# ---------------------------------------------------------------
+
 collections:
   foundations:        { output: true, permalink: /:collection/:path/ }
   distributed-systems: { output: true, permalink: /:collection/:path/ }
