@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{{ page.summary | default: site.tagline }}">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {%- seo -%}
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <span class="masthead__tagline">{{ site.tagline }}</span>
+    <nav class="masthead__links">
+      <a href="{{ '/' | relative_url }}">Sections</a>
+      <a href="https://github.com/{{ site.github }}">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+{% include signature.html %}
+
+</body>
+</html>

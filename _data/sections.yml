@@ -1,0 +1,52 @@
+# Layer 1 is the substrate, layer 10 is the boardroom.
+# Reorder or add entries here and the whole site follows.
+
+- slug: foundations
+  layer: 1
+  name: Foundations
+  note: Operating systems, Linux, shell, memory, storage, networking
+
+- slug: distributed-systems
+  layer: 2
+  name: Distributed Systems
+  note: Consensus, consistency, partitioning, replication, failure
+
+- slug: data-engineering
+  layer: 3
+  name: Data Engineering
+  note: Spark, Kafka, batch, streaming, file formats, testing
+
+- slug: data-platform
+  layer: 4
+  name: Data Platform Architecture
+  note: Lakehouse, medallion, data contracts, governance, regulation
+
+- slug: platform
+  layer: 5
+  name: Cloud &amp; Platform Engineering
+  note: Kubernetes, Terraform, CI/CD, security, observability
+
+- slug: ai-infrastructure
+  layer: 6
+  name: AI Infrastructure
+  note: GPU, CUDA, NCCL, parallelism, sharding, inference serving
+
+- slug: genai
+  layer: 7
+  name: Applied GenAI
+  note: RAG, evaluation, agents, guardrails, model gateways
+
+- slug: mathematics
+  layer: 8
+  name: Mathematics &amp; Theory
+  note: Linear algebra, probability, optimisation, scaling laws
+
+- slug: economics
+  layer: 9
+  name: Economics of Architecture
+  note: FinOps, unit economics, TCO, build versus buy
+
+- slug: practice
+  layer: 10
+  name: Architecture Practice
+  note: Decision records, trade-offs, stakeholders, leadership

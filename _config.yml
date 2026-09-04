@@ -1,0 +1,70 @@
+title: architect
+tagline: Architecture Simplified
+author: Abhishek Verma
+role: Data & AI Platform Architect
+location: Munich, Germany
+email: abhishekv3007@gmail.com
+github: abhishekvermax
+linkedin: abhishekvermaengineer
+
+url: "https://abhishekvermax.github.io"
+baseurl: "/architect"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+timezone: Europe/Berlin
+
+# ---------------------------------------------------------------
+# Sections. Each one is a folder: _foundations, _data-engineering …
+# Drop a .md file in and it appears on the site. No date in the
+# filename, no registration step, nothing else to edit.
+# ---------------------------------------------------------------
+collections:
+  foundations:        { output: true, permalink: /:collection/:path/ }
+  distributed-systems:{ output: true, permalink: /:collection/:path/ }
+  data-engineering:   { output: true, permalink: /:collection/:path/ }
+  data-platform:      { output: true, permalink: /:collection/:path/ }
+  platform:           { output: true, permalink: /:collection/:path/ }
+  ai-infrastructure:  { output: true, permalink: /:collection/:path/ }
+  genai:              { output: true, permalink: /:collection/:path/ }
+  mathematics:        { output: true, permalink: /:collection/:path/ }
+  economics:          { output: true, permalink: /:collection/:path/ }
+  practice:           { output: true, permalink: /:collection/:path/ }
+
+defaults:
+  - scope: { path: "", type: "foundations" }
+    values: { layout: doc, section: foundations, order: 50 }
+  - scope: { path: "", type: "distributed-systems" }
+    values: { layout: doc, section: distributed-systems, order: 50 }
+  - scope: { path: "", type: "data-engineering" }
+    values: { layout: doc, section: data-engineering, order: 50 }
+  - scope: { path: "", type: "data-platform" }
+    values: { layout: doc, section: data-platform, order: 50 }
+  - scope: { path: "", type: "platform" }
+    values: { layout: doc, section: platform, order: 50 }
+  - scope: { path: "", type: "ai-infrastructure" }
+    values: { layout: doc, section: ai-infrastructure, order: 50 }
+  - scope: { path: "", type: "genai" }
+    values: { layout: doc, section: genai, order: 50 }
+  - scope: { path: "", type: "mathematics" }
+    values: { layout: doc, section: mathematics, order: 50 }
+  - scope: { path: "", type: "economics" }
+    values: { layout: doc, section: economics, order: 50 }
+  - scope: { path: "", type: "practice" }
+    values: { layout: doc, section: practice, order: 50 }
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

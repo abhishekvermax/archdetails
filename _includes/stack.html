@@ -1,0 +1,41 @@
+{%- comment -%}
+  Renders every section as an expandable <details> block.
+  Params:  compact  — truthy on the article rail (tighter, no notes)
+           current  — slug of the section to auto-open
+{%- endcomment -%}
+
+<div class="stack">
+{%- for s in site.data.sections -%}
+  {%- assign docs = site[s.slug] | sort: "order" -%}
+  {%- assign n = docs | size -%}
+  <details class="layer"{% if include.current == s.slug %} open{% endif %}>
+    <summary>
+      <span class="layer__no">L{{ s.layer }}</span>
+      <span class="layer__name">{{ s.name }}</span>
+      <span class="layer__count">{{ n }}</span>
+      {%- unless include.compact -%}
+      <span class="layer__note">{{ s.note }}</span>
+      {%- endunless -%}
+    </summary>
+    <div class="layer__body">
+      {%- if n == 0 -%}
+        <p class="empty">Nothing here yet.</p>
+      {%- else -%}
+        {%- assign groups = docs | group_by: "subsection" -%}
+        {%- for g in groups -%}
+          <div class="subgroup">
+            {%- if g.name and g.name != "" -%}
+              <p class="subgroup__name">{{ g.name }}</p>
+            {%- endif -%}
+            <ul class="entries">
+              {%- for d in g.items -%}
+                <li><a href="{{ d.url | relative_url }}">{{ d.title | default: d.slug }}</a></li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </details>
+{%- endfor -%}
+</div>

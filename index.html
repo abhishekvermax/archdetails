@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="frame">
+
+  <section class="hero">
+    <h1>Architecture Simplified</h1>
+    <p>
+      Notes on building data and AI platforms — written from inside regulated
+      financial services, where the trade-offs are real and the auditors are
+      already in the room. Ten layers, from the Linux page cache to the
+      board presentation.
+    </p>
+    <p class="hero__meta">
+      <span>{{ site.data.sections | size }} sections</span>
+      <span>
+        {%- assign total = 0 -%}
+        {%- for s in site.data.sections -%}
+          {%- assign n = site[s.slug] | size -%}
+          {%- assign total = total | plus: n -%}
+        {%- endfor -%}
+        {{ total }} written
+      </span>
+      <span>{{ site.author }} — {{ site.location }}</span>
+    </p>
+  </section>
+
+  {% include stack.html %}
+
+</div>

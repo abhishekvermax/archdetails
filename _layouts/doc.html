@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{%- assign sec = site.data.sections | where: "slug", page.section | first -%}
+
+<div class="frame frame--railed">
+
+  <details class="rail" open>
+    <summary class="rail__toggle">Browse sections</summary>
+    <div class="rail__panel">
+      <p class="rail__title">Sections</p>
+      {% include stack.html compact=true current=page.section %}
+    </div>
+  </details>
+
+  <article class="doc">
+    <p class="doc__crumb">
+      L{{ sec.layer }} &nbsp;/&nbsp; <a href="{{ '/' | relative_url }}#{{ sec.slug }}">{{ sec.name }}</a>
+      {%- if page.subsection %} &nbsp;/&nbsp; {{ page.subsection }}{% endif -%}
+    </p>
+
+    <h1>{{ page.title }}</h1>
+
+    {{ content }}
+  </article>
+
+</div>
